@@ -15,7 +15,7 @@ public class DestroyWhenOutOfView : MonoBehaviour
     {
         Vector3 screenPos = mainCamera.WorldToViewportPoint(transform.position);
         
-        // Check that this gameobject is below the screen bottom
+        //Check that this gameobject is below the screen bottom
         if (screenPos.y < 0.1f)
         {
             Destroy(gameObject);
