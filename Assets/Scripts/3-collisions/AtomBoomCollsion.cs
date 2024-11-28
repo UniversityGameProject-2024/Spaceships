@@ -12,7 +12,6 @@ public class AtomBoomCollsion : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -20,14 +19,10 @@ public class AtomBoomCollsion : MonoBehaviour
     {
         scoreField = GameObject.Find("ScoreField");        
     }
-
-      
-
-
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Player" && enabled) {
+        if (other.tag == "Player" && enabled)
+        {
             Debug.Log("Atom_boom: Player collided with me");
-
             int scorePointsToAdd = 0;
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
             foreach(GameObject enemy in enemies)
@@ -35,8 +30,8 @@ public class AtomBoomCollsion : MonoBehaviour
                 Destroy(enemy);
                 scorePointsToAdd += pointsForEachEnemy;
             }
-
-            if (scoreField!=null) {
+            if (scoreField!=null)
+            {
                 NumberField numberField = scoreField.GetComponentInChildren<NumberField>();
                 numberField.AddNumber(scorePointsToAdd);
             }
@@ -44,9 +39,7 @@ public class AtomBoomCollsion : MonoBehaviour
             {
                 Debug.LogError("ScoreField is not attached to this script!");
             }
-    
             Destroy(this.gameObject);  // Destroy the AtomBoom gameobject
         }
     }
-
 }
