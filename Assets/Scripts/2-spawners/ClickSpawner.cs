@@ -24,7 +24,7 @@ public class ClickSpawner: MonoBehaviour
         isOnlyOneLaserShot = false;
 
         Invoke("BackToOneLaserShot", 5f);
-    }    
+    }
     void BackToOneLaserShot()
     {
         isOnlyOneLaserShot = true;
@@ -52,9 +52,9 @@ public class ClickSpawner: MonoBehaviour
         GameObject[] newGameObjects = new GameObject[3];
 
         int index = 0;
-        for (int deltaX = -2; deltaX<=2; deltaX=deltaX+2)
+        for(int deltaX = -2;deltaX<=2;deltaX=deltaX+2)
         {
-            // Step 1: spawn the new object.
+            //Step 1: spawn the new object.
             Vector3 pos = new Vector3(transform.position.x + deltaX, transform.position.y, transform.position.z);
             Vector3 positionOfSpawnedObject = pos;  // span at the containing object position.
             Quaternion rotationOfSpawnedObject = Quaternion.identity;  // no rotation.
@@ -62,7 +62,8 @@ public class ClickSpawner: MonoBehaviour
 
             // Step 2: modify the velocity of the new object.
             Mover newObjectMover = newGameObjects[index].GetComponent<Mover>();
-            if (newObjectMover) {
+            if (newObjectMover)
+            {
                 newObjectMover.SetVelocity(velocityOfSpawnedObject);
             }
 

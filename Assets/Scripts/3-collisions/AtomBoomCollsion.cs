@@ -26,7 +26,7 @@ public class AtomBoomCollsion : MonoBehaviour
             Debug.Log("Atom_boom: Player collided with me");
             int scorePointsToAdd = 0;
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-            foreach(GameObject enemy in enemies)
+            foreach (GameObject enemy in enemies)
             {
                 Destroy(enemy);
                 scorePointsToAdd += pointsForEachEnemy;
@@ -40,7 +40,7 @@ public class AtomBoomCollsion : MonoBehaviour
             {
                 Debug.LogError("ScoreField is not attached to this script!");
             }
-            Destroy(this.gameObject);  // Destroy the AtomBoom gameobject
+            Destroy(this.gameObject);// Destroy the AtomBoom gameobject
         }
     }
 }

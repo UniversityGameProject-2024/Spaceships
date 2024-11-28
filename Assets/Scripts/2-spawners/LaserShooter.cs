@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 /**
- * This component spawns the given laser-prefab whenever the player clicks a given key.
- * It also updates the "scoreText" field of the new laser.
- */
+* This component spawns the given laser-prefab whenever the player clicks a given key.
+* It also updates the "scoreText" field of the new laser.
+*/
 public class LaserShooter: ClickSpawner
 {
     [SerializeField]
     [Tooltip("How many points to add to the shooter, if the laser hits its target")]
     int pointsToAdd = 1;
     // A reference to the field that holds the score that has to be updated when the laser hits its target.
-    NumberField scoreField;  
+    NumberField scoreField;
     private void Start()
     {
         scoreField = GetComponentInChildren<NumberField>();
@@ -18,7 +18,7 @@ public class LaserShooter: ClickSpawner
     }
     protected override GameObject spawnObject()
     {
-        GameObject newObject;    
+        GameObject newObject;
         newObject = base.spawnObject();  // base = super
         // Modify the text field of the new object.
         ScoreAdder newObjectScoreAdder = newObject.GetComponent<ScoreAdder>();
@@ -30,7 +30,7 @@ public class LaserShooter: ClickSpawner
     {
         GameObject[] newGameObjects = base.spawn3Objects();
 
-        for (int i=0; i<3; i++)
+        for(int i=0;i<3;i++)
         {
             // Modify the text field of the new object.
             ScoreAdder newObjectScoreAdder = newGameObjects[i].GetComponent<ScoreAdder>();
