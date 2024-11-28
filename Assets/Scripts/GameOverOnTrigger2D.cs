@@ -8,7 +8,7 @@ public class GameOverOnTrigger2D : MonoBehaviour
     [SerializeField] string triggeringTag;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == triggeringTag && enabled)
+        if (other.tag == triggeringTag && enabled)
         {
             Debug.Log("Game over!");
             Application.Quit();
@@ -17,6 +17,6 @@ public class GameOverOnTrigger2D : MonoBehaviour
     }
     private void Update()
     {
-/* Just to show the enabled checkbox in Editor */
+        /* Just to show the enabled checkbox in Editor */
     }
 }
