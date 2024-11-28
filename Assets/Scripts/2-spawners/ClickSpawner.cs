@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 /**
- * This component spawns the given object whenever the player clicks a given key.
- */
+* This component spawns the given object whenever the player clicks a given key.
+*/
 public class ClickSpawner: MonoBehaviour
 {
     [SerializeField] protected InputAction spawnAction = new InputAction(type: InputActionType.Button);
@@ -52,7 +52,7 @@ public class ClickSpawner: MonoBehaviour
         GameObject[] newGameObjects = new GameObject[3];
 
         int index = 0;
-        for(int deltaX = -2; deltaX <=2; deltaX = deltaX+2)
+        for(int deltaX = -2; deltaX <= 2; deltaX += 2)
         {//Step 1: spawn the new object.
             Vector3 pos = new Vector3(transform.position.x + deltaX, transform.position.y, transform.position.z);
             Vector3 positionOfSpawnedObject = pos;  // span at the containing object position.

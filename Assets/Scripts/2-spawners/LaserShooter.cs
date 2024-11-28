@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 public class LaserShooter: ClickSpawner
 {
-    [SerializeField]
+    //[SerializeField]
     [Tooltip("How many points to add to the shooter, if the laser hits its target")]
     int pointsToAdd = 1;
     // A reference to the field that holds the score that has to be updated when the laser hits its target.
