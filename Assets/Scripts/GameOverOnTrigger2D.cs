@@ -14,9 +14,7 @@ public class GameOverOnTrigger2D : MonoBehaviour
             UnityEditor.EditorApplication.isPlaying = false;  // Error on editor 2021.3
         }
     }
-
     private void Update() {
         /* Just to show the enabled checkbox in Editor */
     }
-
 }

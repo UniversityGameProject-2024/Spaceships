@@ -16,8 +16,7 @@ public class ShieldThePlayer : MonoBehaviour {
             Debug.Log("Shield triggered by " + other.name);
         }
     }
-
-    private async void ShieldTemporarily(DestroyOnTrigger2D destroyComponent) {
+     private async void ShieldTemporarily(DestroyOnTrigger2D destroyComponent) {
         destroyComponent.enabled = false;
         for (float t = duration; t > 0; t--) {
             Debug.Log("Shield: " + t + " seconds remaining!");
@@ -26,7 +25,6 @@ public class ShieldThePlayer : MonoBehaviour {
         Debug.Log("Shield gone!");
         destroyComponent.enabled = true;
     }
-
     /* OLD CODE --- using coroutines
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {

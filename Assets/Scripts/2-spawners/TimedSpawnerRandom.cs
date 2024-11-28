@@ -19,7 +19,6 @@ public class TimedSpawnerRandom: MonoBehaviour {
     void Start() {
          SpawnRoutine();
     }
-
     async void SpawnRoutine() {
         while (true) {
             float timeBetweenSpawnsInSeconds = Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
@@ -37,7 +36,6 @@ public class TimedSpawnerRandom: MonoBehaviour {
             Invoke("DestroyPrefabInstance", 1);
         }
     }
-
     void DestroyPrefabInstance()
     {
         Destroy(newPrefabInstance, secondsUntillDestroy);
