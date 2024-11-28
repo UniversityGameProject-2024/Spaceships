@@ -4,6 +4,7 @@
 * NOTE: velocity is defined as speed+direction
 * speed is a number; velocity is a vector
 */
+
 public class Mover: MonoBehaviour
 {
     [Tooltip("Movement vector in meters per second")]
