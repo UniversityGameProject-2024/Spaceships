@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
-
 /**
 * This component instantiates a given prefab at random time intervals and random bias from its object position.
 */
+
 public class TimedSpawnerRandom: MonoBehaviour
 {
     [SerializeField] Mover prefabToSpawn;
