@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
-public class LaserShooter: ClickSpawner{
+public class LaserShooter: ClickSpawner
+{
     [Tooltip("How many points to add to the shooter if the laser hits its target")]
     int pointsToAdd = 1;
     //A reference to the field that holds the score that has to be updated when the laser hits its target.
@@ -14,7 +15,7 @@ public class LaserShooter: ClickSpawner{
     {
         GameObject newObject;
         newObject = base.spawnObject();  // base = super
-        // Modify the text field of the new object.
+        //Modify the text field of the new object.
         ScoreAdder newObjectScoreAdder = newObject.GetComponent<ScoreAdder>();
         if (newObjectScoreAdder)
             newObjectScoreAdder.SetScoreField(scoreField).SetPointsToAdd(pointsToAdd);
