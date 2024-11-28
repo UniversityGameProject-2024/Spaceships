@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 /**
-* This component moves its object when the player clicks the arrow keys
+*This component moves its object when the player clicks the arrow keys
 */
 
 public class InputMover: MonoBehaviour

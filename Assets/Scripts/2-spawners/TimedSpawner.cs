@@ -2,8 +2,9 @@
 using System.Threading.Tasks;
 using UnityEngine;
 /**
-* This component spawns the given object at fixed time-intervals at its object position
+*This component spawns the given object at fixed time ntervals at its object position
 */
+
 public class TimedSpawner: MonoBehaviour
 {
     [SerializeField] Mover prefabToSpawn;

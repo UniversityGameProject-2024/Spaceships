@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 /**
-* This component spawns the given object whenever the player clicks a given key
+*This component spawns the given object whenever the player clicks a given key
 */
 
 public class ClickSpawner: MonoBehaviour
