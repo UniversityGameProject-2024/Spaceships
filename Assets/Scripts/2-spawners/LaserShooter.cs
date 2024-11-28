@@ -29,7 +29,7 @@ public class LaserShooter: ClickSpawner
     protected override GameObject[] spawn3Objects()
     {
         GameObject[] newGameObjects = base.spawn3Objects();
-        for (int i = 0;i < 3;i++)
+        for(int i = 0;i < 3; i++)
         {
             ScoreAdder newObjectScoreAdder = newGameObjects[i].GetComponent<ScoreAdder>();
             if (newObjectScoreAdder)
