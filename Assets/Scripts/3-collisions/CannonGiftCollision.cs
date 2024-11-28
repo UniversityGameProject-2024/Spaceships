@@ -5,21 +5,23 @@ public class CannonGiftCollission : MonoBehaviour
     //[Tooltip("Every object tagged with this tag will trigger the destruction of this object")]
     //[SerializeField] string triggeringTag;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    { 
+void Start()
+{ 
+
+}
+ // Update is called once per frame
+void Update()
+{
+
+}
+private void OnTriggerEnter2D(Collider2D other) {
+    if (other.tag == "Player" && enabled) {
+        Debug.Log("Canon_gift: Player collided with me");
+        LaserShooter scriptLaserShooter = other.gameObject.GetComponent<LaserShooter>();
+        scriptLaserShooter.Start3LasersTemporary();
+        Destroy(this.gameObject);  // Destroy the Cannon Gift
     }
-    // Update is called once per frame
-    void Update()
-    {
-    }
-    private void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Player" && enabled) {
-            Debug.Log("Canon_gift: Player collided with me");
-            LaserShooter scriptLaserShooter = other.gameObject.GetComponent<LaserShooter>();
-            scriptLaserShooter.Start3LasersTemporary();
-            Destroy(this.gameObject);  // Destroy the Cannon Gift
-        }
-    }
+}
     // [Tooltip("The number of seconds that the shield remains active")] [SerializeField] float duration;
     // private void OnTriggerEnter2D(Collider2D other) {
     //     if (other.tag == "Player") {
