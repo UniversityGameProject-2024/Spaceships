@@ -31,7 +31,7 @@ public class AtomBoomCollsion : MonoBehaviour
                 Destroy(enemy);
                 scorePointsToAdd += pointsForEachEnemy;
             }
-            if (scoreField!=null)
+            if(scoreField!=null)
             {
                 NumberField numberField = scoreField.GetComponentInChildren<NumberField>();
                 numberField.AddNumber(scorePointsToAdd);

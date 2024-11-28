@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
-
 /**
 * This component moves its object when the player clicks the arrow keys.
 */
