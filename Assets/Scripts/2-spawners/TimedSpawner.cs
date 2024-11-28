@@ -32,6 +32,7 @@ public class TimedSpawner: MonoBehaviour {
         SpawnRoutine();
         Debug.Log("Start finished");
     }
+
     async void SpawnRoutine() {
         while (true) {
             GameObject newObject = Instantiate(prefabToSpawn.gameObject, transform.position, Quaternion.identity);
@@ -40,4 +41,5 @@ public class TimedSpawner: MonoBehaviour {
             // See here for more options: https://docs.unity3d.com/6000.0/Documentation/Manual/async-awaitable-introduction.html
         }
     }
+
 }

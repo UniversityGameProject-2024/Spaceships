@@ -15,6 +15,7 @@ public class DestroyOnTrigger2D : MonoBehaviour {
             Destroy(other.gameObject);
         }
     }
+
     private void Update() {
         /* Just to show the enabled checkbox in Editor */
     }

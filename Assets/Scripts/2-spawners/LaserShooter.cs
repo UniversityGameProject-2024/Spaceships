@@ -17,17 +17,25 @@ public class LaserShooter: ClickSpawner {
         if (!scoreField)
             Debug.LogError($"No child of {gameObject.name} has a NumberField component!");
     }
+
     protected override GameObject spawnObject() {
+
         GameObject newObject;    
+
         newObject = base.spawnObject();  // base = super
+
         // Modify the text field of the new object.
         ScoreAdder newObjectScoreAdder = newObject.GetComponent<ScoreAdder>();
         if (newObjectScoreAdder)
             newObjectScoreAdder.SetScoreField(scoreField).SetPointsToAdd(pointsToAdd);
+
         return newObject;
     }
+
     protected override GameObject[] spawn3Objects() {
+
         GameObject[] newGameObjects = base.spawn3Objects();
+
         for (int i=0; i<3; i++)
         {
             // Modify the text field of the new object.
@@ -37,6 +45,7 @@ public class LaserShooter: ClickSpawner {
                 newObjectScoreAdder.SetScoreField(scoreField).SetPointsToAdd(pointsToAdd);
             }
         }
+
         return null;
     }
 }
