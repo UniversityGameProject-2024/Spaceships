@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 /**
  * This is a static class that keeps the player scores between scenes.
  */

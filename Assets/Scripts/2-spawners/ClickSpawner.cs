@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
-
 /**
  * This component spawns the given object whenever the player clicks a given key.
  */
@@ -9,8 +8,6 @@ public class ClickSpawner: MonoBehaviour
     [SerializeField] protected InputAction spawnAction = new InputAction(type: InputActionType.Button);
     [SerializeField] protected GameObject prefabToSpawn;
     [SerializeField] protected Vector3 velocityOfSpawnedObject;
-
-    
     [SerializeField] public bool isOnlyOneLaserShot = true;
 
     void OnEnable()
@@ -22,20 +19,16 @@ public class ClickSpawner: MonoBehaviour
     {
         spawnAction.Disable();
     }
-
     public void Start3LasersTemporary()
     {
         isOnlyOneLaserShot = false;
 
         Invoke("BackToOneLaserShot", 5f);
     }    
-
     void BackToOneLaserShot()
     {
         isOnlyOneLaserShot = true;
     }
-
-
     protected virtual GameObject spawnObject()
     {
         //Debug.Log("Spawning a new object");
@@ -51,12 +44,10 @@ public class ClickSpawner: MonoBehaviour
         {
             newObjectMover.SetVelocity(velocityOfSpawnedObject);
         }
-
         return newObject;
     }
-
-
-    protected virtual GameObject[] spawn3Objects() {
+    protected virtual GameObject[] spawn3Objects()
+    {
         //Debug.Log("Spawning a new object");
         GameObject[] newGameObjects = new GameObject[3];
 
@@ -82,16 +73,16 @@ public class ClickSpawner: MonoBehaviour
     }
 
 
-    private void Update() {
-        if (spawnAction.WasPressedThisFrame()) {
-
+    private void Update()
+    {
+        if (spawnAction.WasPressedThisFrame())
+        {
             if (isOnlyOneLaserShot)
             {
                 spawnObject();
             }
             else
             {
-
                 spawn3Objects();
             }
 

@@ -17,7 +17,8 @@ public class CannonGiftCollission : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.tag == "Player" && enabled)
         {
             Debug.Log("Canon_gift: Player collided with me");

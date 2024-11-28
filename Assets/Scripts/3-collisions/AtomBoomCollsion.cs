@@ -17,9 +17,10 @@ public class AtomBoomCollsion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreField = GameObject.Find("ScoreField");        
+        scoreField = GameObject.Find("ScoreField");
     }
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.tag == "Player" && enabled)
         {
             Debug.Log("Atom_boom: Player collided with me");

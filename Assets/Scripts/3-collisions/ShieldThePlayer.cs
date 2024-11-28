@@ -17,7 +17,8 @@ public class ShieldThePlayer : MonoBehaviour
                 ShieldTemporarily(destroyComponent);
                 Destroy(this.gameObject);  // Destroy the shield itself - to prevent double-use
             }
-        } else
+        }
+        else
         {
             Debug.Log("Shield triggered by " + other.name);
         }

@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-
 /**
  * This component moves its object in a fixed velocity.
  * NOTE: velocity is defined as speed+direction.
