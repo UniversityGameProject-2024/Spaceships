@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-public class LaserShooter: ClickSpawner
+public class LaserShooter : ClickSpawner
 {
     [Tooltip("How many points to add to the shooter if the laser hits its target")]
     int pointsToAdd = 1;

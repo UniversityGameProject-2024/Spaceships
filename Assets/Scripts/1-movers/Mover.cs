@@ -5,7 +5,7 @@
 *speed is a number; velocity is a vector
 */
 
-public class Mover: MonoBehaviour
+public class Mover : MonoBehaviour
 {
     [Tooltip("Movement vector in meters per second")]
     [SerializeField] Vector3 velocity;

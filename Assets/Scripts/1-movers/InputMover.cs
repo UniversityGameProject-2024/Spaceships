@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 *This component moves its object when the player clicks the arrow keys
 */
 
-public class InputMover: MonoBehaviour
+public class InputMover : MonoBehaviour
 {
     [Tooltip("Speed of movement, in meters per second")]
     [SerializeField] float speed = 10f;
