@@ -11,9 +11,9 @@
 קישור למשחק:
 
 
-(https://wnikita.itch.io/spaceships)
+(https://yakovelkobi.itch.io/spaceships)
 ---
-מגישים:
+מגיש:
 
 יעקב אלקובי
 
